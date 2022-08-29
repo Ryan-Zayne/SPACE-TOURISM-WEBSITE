@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+/* ----------------- */
+/* General CSS Reset */
+/*-------------------*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* ----------------- */
+/* Custom Variables */
+/* ----------------- */
+
+:root {
+    /* Colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: #fff;
+
+    /* Font-sizes */
+    --fs-900: 15rem;
+    --fs-800: 10rem;
+    --fs-700: 5.6rem;
+    --fs-600: 3.2rem;
+    --fs-500: 2.8rem;
+    --fs-400: 1.6rem;
+    --fs-300: 1.5rem;
+    --fs-200: 1.4rem;
+
+    /* Font families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+
+/* -------------------------- */
+/* Making basic style resets */
+/* ------------------------- */
+html {
+    font-size: 10px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+button {
+    cursor: pointer;
+    line-height: inherit;
+    border: none;
+}
+
+/* Setting up the body*/
+body {
+    font-size: var(--fs-400);
+    font-family: var(--ff-sans-normal);
+    line-height: 1.5;
+    color: var(--clr-white);
+    overflow-x: hidden;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.6;
+    background-color: hsl( var(--clr-dark) );
+    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* Colors */
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: var(--clr-white);}
+
+/* Typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+/*
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px; 
+}
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl( var(--clr-white) / .25);
+    f
+} */
+
+.letter-spacing-1  { letter-spacing: 2.35px; }
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 4.75px; }
+
+.uppercase { 
+    text-transform: uppercase; 
+}
+
+
+
+
+/*------------ */
+/*$ MOBILE VIEW $*/
+/* ----------- */
+
+@media (min-width: 0px) {
+/* Header*/
+.header{
+    display: flex;
+    padding-top: 2.4rem;
+    gap: 55%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar {
+    width: 25.1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: hsl( var(--clr-dark) / 0.04);
+    backdrop-filter: blur(8.1rem);
+    transform: translateX(100%);
+    transition: transform 300ms linear; /*Using this transition alone will make the exit
+                                         and entrance run at the same speed*/
+}
+
+.nav-bar.menu-toggle{
+    transform: translateX(0);
+    transition: transform 500ms ease-in-out; /*This transition makes the hamburger 
+                                                entrance longer than the exit*/
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    padding: 11.8rem 0 0 2.9rem;
+    gap: 3.2rem;
+}
+
+.nav-list span{
+    font-weight: 700;
+}
+
+.hamburger{
+    background-color: transparent;
+    background-size: 100% 100%;
+    height: 2.1rem;
+    width: 2.4rem;
+    z-index: 12;
+    background-image: url(./assets/shared/icon-hamburger.svg);
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+}
+
+.hamburger:active{
+    transform: scale(0.75);
+}
+
+.hamburger.close{
+    background-image: url(./assets/shared/icon-close.svg);
+}
+
+.main-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 4.8rem;
+    text-align: center;
+}
+
+.main-container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    
+  
+}
