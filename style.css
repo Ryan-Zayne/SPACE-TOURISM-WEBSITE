@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 
 /* ----------------- */
 /* General CSS Reset */
@@ -9,7 +9,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 /* ----------------- */
@@ -20,11 +19,11 @@
     /* Colors */
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
-    --clr-white: #fff;
+    --clr-white: 0, 0%, 100%;
 
     /* Font-sizes */
     --fs-900: 15rem;
-    --fs-800: 10rem;
+    --fs-800: 8rem;
     --fs-700: 5.6rem;
     --fs-600: 3.2rem;
     --fs-500: 2.8rem;
@@ -38,14 +37,19 @@
     --ff-sans-normal: "Barlow", sans-serif;
 }
 
-
 /* -------------------------- */
 /* Making basic style resets */
 /* ------------------------- */
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
+    min-height: 100vh;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
 
 h1,
 h2,
@@ -69,37 +73,35 @@ button {
     font-family: inherit;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
-    color: var(--clr-white);
+    color: hsl(var(--clr-white));
 }
 
 button {
     cursor: pointer;
     line-height: inherit;
     border: none;
+    outline: none;
 }
 
 /* Setting up the body*/
 body {
+    position: relative;
     font-size: var(--fs-400);
     font-family: var(--ff-sans-normal);
-    line-height: 1.5;
-    color: var(--clr-white);
-    overflow-x: hidden;
+    color: hsl(var(--clr-white));
     min-height: 100vh;
-    text-rendering: optimizeSpeed;
     line-height: 1.6;
-    background-color: hsl( var(--clr-dark) );
+    background-color: hsl(var(--clr-dark));
     background-image: url(./assets/home/background-home-mobile.jpg);
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-
 
 /* ------------------- */
 /* Utility classes     */
@@ -156,8 +158,8 @@ body {
 .letter-spacing-2 { letter-spacing: 2.7px; } 
 .letter-spacing-3 { letter-spacing: 4.75px; }
 
-.uppercase { 
-    text-transform: uppercase; 
+.uppercase {
+    text-transform: uppercase;
 }
 
 
@@ -168,121 +170,168 @@ body {
 /* ----------- */
 
 @media (min-width: 0px) {
-/* Header*/
-.header{
-    display: flex;
-    padding-top: 2.4rem;
-    gap: 55%;
-    justify-content: space-around;
-    align-items: center;
+    /* Header*/
+    .header {
+        display: flex;
+        padding: 2.4rem 3.7rem 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-bar {
+        width: 25.1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 10;
+        background-color: hsl(var(--clr-white), 0.04);
+        backdrop-filter: blur(8.1rem);
+        transform: translateX(200%);
+        transition: transform 200ms ease;
+                                                    /*Using this transition alone will make the exit
+                                                    and entrance of the hamburger run at the same speed*/
+    }
+
+    .nav-bar.menu-toggle {
+        transform: translateX(0);
+        transition: transform 500ms ease;
+        /*Using This transition along with the one above makes the hamburger entrance
+                                        speed differ from the exit; 
+                                        If used alone, it affects only the entrance speed and neglects exit*/
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        padding: 11.8rem 0 0 2.9rem;
+        gap: 3.2rem;
+    }
+
+    .nav-list span {
+        font-weight: 700;
+    }
+
+    .list-item span {
+        display: none;
+    }
+
+    .hamburger {
+        background-color: transparent;
+        background-size: 100% 100%;
+        height: 2.1rem;
+        width: 2.4rem;
+        z-index: 20;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        transition: transform 100ms linear;
+    }
+
+    .hamburger.close {
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+
+    .hamburger:active {
+        transform: scale(0.85);
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8.1rem;
+        margin-top: 4.8rem;
+    }
+
+    .main-container>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+        margin-inline: 2.4rem;
+        max-width: 45rem;
+        text-align: center;
+    }
+
+    .large-button {
+        display: grid;
+        position: relative;
+        place-content: center;
+        letter-spacing: 1.5px;
+        z-index: 1;
+        font-size: 2rem;
+        background-color: hsl(var(--clr-white));
+        color: hsl(var(--clr-dark));
+        width: 15rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    .large-button::after {
+        content: " ";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(var(--clr-white), 0.1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 500ms linear, transform 750ms ease-in-out;
+    }
+
+    .large-button:hover::after,
+    .large-button:focus::after {
+        opacity: 1;
+        transform: scale(1.5);
+    }
 }
 
-.nav-bar {
-    width: 25.1rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 100vh;
-    z-index: 5;
-    background-color: hsl( var(--clr-dark) / 0.04);
-    backdrop-filter: blur(8.1rem);
-    transform: translateX(100%);
-    transition: transform 300ms linear; /*Using this transition alone will make the exit
-                                         and entrance run at the same speed*/
-}
-
-.nav-bar.menu-toggle{
-    transform: translateX(0);
-    transition: transform 500ms ease-in-out; /*This transition makes the hamburger 
-                                                entrance longer than the exit*/
-}
-
-.nav-list{
-    display: flex;
-    flex-direction: column;
-    padding: 11.8rem 0 0 2.9rem;
-    gap: 3.2rem;
-}
-
-.nav-list span{
-    font-weight: 700;
-}
-
-.hamburger{
-    background-color: transparent;
-    background-size: 100% 100%;
-    height: 2.1rem;
-    width: 2.4rem;
-    z-index: 12;
-    background-image: url(./assets/shared/icon-hamburger.svg);
-    transition: transform 100ms ease-in-out;
-}
-
-.hamburger:active{
-    transform: scale(0.8);
-}
-
-.hamburger.close{
-    background-image: url(./assets/shared/icon-close.svg);
-}
-
-.main-container{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 8.1rem;
-    margin-top: 4.8rem;
-    text-align: center;
-}
-
-.main-container > div{
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    
-}
-
-.large-button{
-    display: grid;
-    position: relative;
-    place-content: center;
-    letter-spacing: 1.5px;
-    z-index: 1;
-    font-size: 2rem;
-    background-color: var(--clr-white);
-    color: hsl(var(--clr-dark));
-    width: 15rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-}
-
-.large-button::after {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-color: hsl( 0 0% 100% / 0.1 );
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 500ms linear, transform 750ms ease-in-out;
-}
- 
-.large-button:hover::after,
-.large-button:focus::after {
-    opacity: 1;
-    transform: scale(1.5);
-}
-}
 
 
 
-
-
+/*------------ */
+/*$ TABLET VIEW $*/
+/* ----------- */
 
 @media (min-width: 768px) {
 
-    
-  
+    :root {
+            /* Font-sizes */
+            --fs-900: 15rem;
+            --fs-800: 15rem;
+            --fs-700: 5.6rem;
+            --fs-600: 3.2rem;
+            --fs-500: 2.8rem;
+            --fs-400: 2rem;
+            --fs-300: 1.6rem;
+            --fs-200: 1.4rem;
+        }
+    .header {
+        gap: initial;
+        padding-right: 0;
+        padding-top: 0;
+    }
+
+    .nav-bar {
+        display: flex;
+        transform: initial;
+        height: initial;
+        width: min(100%, 45rem);
+        position: initial;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        padding: 3.9rem 4.8rem;
+
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .large-button{
+        width: 24.2rem;
+    }
 }
