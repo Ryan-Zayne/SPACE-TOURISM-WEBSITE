@@ -162,7 +162,7 @@ button {
         font-size: 1.6rem;
         font-family: var(--ff-sans-normal);
         color: hsl(var(--clr-white));
-        min-height: 100vh;
+        height: 100%;
         line-height: 1.6;
         background-color: hsl(var(--clr-dark));
         overflow-y: hidden;
@@ -203,12 +203,12 @@ button {
             top: 0;
             right: 0;
             height: 100%;
-            /* transition: width 150ms ease; */
+            transition: width 150ms ease;
                                                   /* Using this transition alone will make the exit
                                                     and entrance of the hamburger run at the same speed;
 
                                                     BUT I commented it out BECAUSE the width transition gets 
-                                                    inherited on the bigger screens as well */
+                                                    inherited on the bigger screens as well, causing a weird pop up flash of the hamburger nav menu*/
         }
 
         .nav-bar.menu-toggle {
@@ -236,7 +236,7 @@ button {
     
         .hamburger:active {
             transform: rotate(360deg);
-            transition: transform 1s ease;
+            transition: transform 0.25s ease-in-out;
         }
     
         .hamburger:active.close{
