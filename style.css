@@ -237,10 +237,7 @@ button {
     
         .hamburger:active {
             transform: rotate(180deg);
-        }
-    
-        .hamburger:active.close{
-            transform: rotate(-180deg);
+            transition: all 0.0s ease;
         }
 
 
