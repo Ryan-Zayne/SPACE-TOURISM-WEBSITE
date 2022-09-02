@@ -1,16 +1,18 @@
-const navToggle = document.querySelector(".nav-bar"),
-  menuToggle = document.querySelector(".hamburger"),
-  mainContent = document.querySelector(".main-container");
+const navBar = document.querySelector(".nav-bar");
+const hamburgerToggle = document.querySelector(".hamburger");
+// const mainContent = document.querySelector(".main-container");
 
-menuToggle.addEventListener("click", () => {
-  navToggle.classList.toggle("menu-toggle");
-  menuToggle.classList.toggle("close");
+hamburgerToggle.addEventListener("click", () => {
+  navBar.classList.toggle("menu-toggle");
+  hamburgerToggle.classList.toggle("close");
 });
 
 // This block is to make the hamburger disappear if user clicks outside the navigation block
-mainContent.addEventListener("click", () => {
-  if (navToggle.classList.contains("menu-toggle") && menuToggle.classList.contains("close")) {
-    navToggle.classList.remove("menu-toggle");
-    menuToggle.classList.remove("close");
-  }
-});
+// mainContent.addEventListener("click", () => {
+//   if (navBar.classList.contains("menu-toggle") && hamburgerToggle.classList.contains("close")) {
+//     navBar.classList.remove("menu-toggle");
+//     hamburgerToggle.classList.remove("close");
+//   }
+// });
+
+

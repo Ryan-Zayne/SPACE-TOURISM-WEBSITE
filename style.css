@@ -16,12 +16,11 @@
 /* ------------------------- */
 html {
     font-size: 10px;
-    scroll-behavior: smooth;
-    min-height: 100vh;
 }
 
 html,
 body {
+    scroll-behavior: smooth;
     overflow-x: hidden;
 }
 
@@ -36,7 +35,7 @@ p {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
@@ -63,19 +62,7 @@ button {
     outline: none;
 }
 
-/* Setting up the body*/
-body {
-    position: relative;
-    font-size: 1.6rem;
-    font-family: var(--ff-sans-normal);
-    color: hsl(var(--clr-white));
-    min-height: 100vh;
-    line-height: 1.6;
-    background-color: hsl(var(--clr-dark));
-    background-image: url(./assets/home/background-home-mobile.jpg);
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
+
 
 /* ------------------- */
 /* Utility classes     */
@@ -121,6 +108,20 @@ body {
     text-transform: uppercase;
 }
 
+.underline-indicators:hover::after, .underline-indicators:active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: hsl( var(--clr-white), 0.5);
+}
+
+.underline-indicators:active::after{
+    background-color: hsl(var(--clr-white));
+}
+
+
 
 /* ----------------- */
 /* Custom Variables */
@@ -155,6 +156,32 @@ body {
 /*$ MOBILE VIEW $*/  /*MOBILE FIRST DESIGN*/
 /* ----------- */
 
+/* Setting up the body*/
+    body {
+        position: relative;
+        font-size: 1.6rem;
+        font-family: var(--ff-sans-normal);
+        color: hsl(var(--clr-white));
+        min-height: 100vh;
+        line-height: 1.6;
+        background-color: hsl(var(--clr-dark));
+        overflow-y: hidden;
+    }
+
+    body.home-page{
+        background-image: url(./assets/home/background-home-mobile.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .logo{
+        width: clamp(4rem, 5vw, 4.8rem);         /* 5vw in the middle acts like the value by which the 
+                                                    element shrinks and grows to the limit of the min and max value. It helps reduce the need for
+                                                    size related media queries, Whether font-size or margin or anything else you might use a media query for. 
+                                                    (P.S: Always set them to be equal to or slightly above the max value for best effect) */
+        aspect-ratio: 1;
+    }
+
     .header {
         display: flex;
         padding: 2.4rem 3.7rem 0;
@@ -162,31 +189,61 @@ body {
         align-items: center;
     }
 
-    .logo{
-        width: 4rem;
-        aspect-ratio: 1;
-    }
-
     .nav-bar {
-        width: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
         z-index: 10;
         background-color: hsl(var(--clr-white), 0.04);
         backdrop-filter: blur(3rem);
-        transition: width 150ms ease;
-                                                    /*Using this transition alone will make the exit
-                                                    and entrance of the hamburger run at the same speed*/
     }
 
-    .nav-bar.menu-toggle {
-        width: 25.1rem;
-        transition: width 500ms ease;
-                                        /*Using This transition along with the one above makes the hamburger entrance
-                                        speed differ from the exit; 
-                                        If used alone, it affects only the entrance speed and neglects exit*/
+    /* A media query to prevent inheritance of these styles below into bigger screen sizes */
+    @media screen and (max-width: 767.999px) {
+        .nav-bar{
+            width: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            /* transition: width 150ms ease; */
+                                                  /* Using this transition alone will make the exit
+                                                    and entrance of the hamburger run at the same speed;
+
+                                                    BUT I commented it out BECAUSE the width transition gets 
+                                                    inherited on the bigger screens as well */
+        }
+
+        .nav-bar.menu-toggle {
+            width: 25.1rem;
+            transition: width 500ms ease;
+                                        /*  Using This transition along with the one above makes the hamburger entrance
+                                            speed differ from the exit; 
+                                            
+                                            If used alone, it affects only the entrance speed and neglects exit */
+        }
+
+        .hamburger {
+            background-color: transparent;
+            background-size: 100% 100%;
+            height: 2.1rem;
+            width: 2.4rem;
+            z-index: 20;
+            background-image: url(./assets/shared/icon-hamburger.svg);
+            transition: transform 100ms linear;
+        }
+    
+        .hamburger.close {
+            background-image: url(./assets/shared/icon-close.svg);
+        }
+    
+        .hamburger:active {
+            transform: rotate(360deg);
+            transition: transform 1s ease;
+        }
+    
+        .hamburger:active.close{
+            transform: rotate(-360deg);
+        }
+
+
     }
 
     .nav-list {
@@ -196,36 +253,13 @@ body {
         gap: 3.2rem;
     }
 
-    .list-item a{
+    .list-item > a{
         display: flex;
         gap: 1rem;
     }
 
     .list-item-number {
         font-weight: 700;
-    }
-
-    .hamburger {
-        background-color: transparent;
-        background-size: 100% 100%;
-        height: 2.1rem;
-        width: 2.4rem;
-        z-index: 20;
-        background-image: url(./assets/shared/icon-hamburger.svg);
-        transition: transform 100ms linear;
-    }
-
-    .hamburger.close {
-        background-image: url(./assets/shared/icon-close.svg);
-    }
-
-    .hamburger:active {
-        transform: rotate(360deg);
-        transition: transform 1s ease;
-    }
-
-    .hamburger:active.close{
-        transform: rotate(-360deg);
     }
 
     .main-container {
@@ -255,9 +289,10 @@ body {
         z-index: 1;
         background-color: hsl(var(--clr-white));
         color: hsl(var(--clr-dark));
-        width: 15rem;
+        padding-inline: clamp(2.9rem, 4.5%, 4.8rem); /**/
         aspect-ratio: 1;
         border-radius: 50%;
+    
     }
 
     .large-button::after {
@@ -270,10 +305,10 @@ body {
         border-radius: 50%;
         opacity: 0;
         transition: opacity 500ms linear, transform 750ms ease-in-out;
+        overflow: hidden;
     }
 
-    .large-button:hover::after,
-    .large-button:focus::after {
+    .large-button:hover::after {
         opacity: 1;
         transform: scale(1.5);
     }
@@ -288,18 +323,17 @@ body {
 @media (min-width: 768px) {
 
     :root {
-            /* Font-sizes */
-            --fs-900: 15rem;
-            --fs-800: 12rem;
-            --fs-700: 5.6rem;
-            --fs-600: 3.2rem;
-            --fs-500: 2.8rem;
-            --fs-400: 2rem;
-            --fs-300: 1.6rem;
-            --fs-200: 1.4rem;
+         /* Font-sizes */
+         --fs-900: 15rem;
+         --fs-800: 10rem;
+         --fs-600: 2.6rem;
+         --fs-500: 2.8rem;
+         --fs-400: 2rem;
+         --fs-300: 1.6rem;
+         --fs-200: 1.4rem;
     }
 
-    body {
+    body.home-page{
         background-image: url(/assets/home/background-home-tablet.jpg);
     }
 
@@ -308,47 +342,32 @@ body {
         padding: 0 0 0 4.3rem;
     }
 
-    .logo{
-        width: initial;
-    }
-
     .nav-bar {
         width: max(57vw, 50rem);
         display: flex;
         justify-content: center;
+		height: 9.6rem;
         align-items: center;
-        transform: none;
-        height: initial;
-        position: initial;
     }
+
+    
 
     .nav-list {
         flex-direction: row;
         padding: 0;
-        height: 9.6rem;
+        height: 100%;
         gap: 4.8rem;
     }
 
     .list-item, .list-item > a{
+        position: relative; /* Enables the underline indicator to work*/
         cursor: pointer;
         display: inherit;
         align-items: center;
         height: 100%;
     }
 
-    .list-item:hover{
-        border-bottom: 2px solid hsl(var(--clr-white), 0.5);
-    }
-
-    .list-item:active{
-        border-bottom: 2px solid hsl(var(--clr-white));
-    }
-
     .list-item-number{
-        display: none;
-    }
-
-    .hamburger {
         display: none;
     }
 
@@ -358,13 +377,9 @@ body {
 
     .large-button{
         letter-spacing: 2px;
-        width: 24.2rem;
-    }
-
-    .large-button:hover::after{
-        transform: scale(1.5);
     }
     
+
 }
 
 
@@ -379,14 +394,14 @@ body {
         /* Font-sizes */
         --fs-900: 15rem;
         --fs-700: 5.6rem;
-        --fs-600: 3.2rem;
+        --fs-600: 3rem;
         --fs-500: 2.8rem;
         --fs-400: 2.4rem;
         --fs-300: 1.8rem;
         --fs-200: 1.6rem;
     }
     
-    body{
+    body.home-page{
         background-image: url(/assets/home/background-home-desktop.jpg);
     }
 
@@ -394,6 +409,19 @@ body {
         padding-top: 3rem;
     }
     
+    /* For the transparent line btw logo and navbar */
+    .nav-bar::before{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width:  55%;                /* This was what finally helped to prevent the line from touching logo 
+                                    while the translation below helped to keep a bit of it inside the navbar*/
+        
+        
+        transform: translateX(-42vw);
+        background-color: hsl( var(--clr-white), 0.5);
+    }
+     
     .list-item-number{
         display: initial;
     }
@@ -411,9 +439,6 @@ body {
     }
 
 
-
-    .large-button{
-        min-width: 27.4rem;
-    }
-
 }
+
+

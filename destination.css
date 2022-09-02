@@ -1,0 +1,30 @@
+@import 'style.css';
+
+:root{
+    --fs-400: 1.4rem;
+}
+
+.tabs-list{
+	display: flex;
+	gap: 2.6rem;
+	height: 2.8rem;
+}
+
+
+.tabs-list > *{
+	display: flex;
+	align-items: flex-start;
+	height: 100%;
+	position: relative; /*For underline to work*/
+}
+
+
+@media (min-width: 768px) {
+    :root{
+        --fs-400: 1.6rem;
+    }
+
+    .tabs-list{
+        height: 3.4rem;
+    }
+}
