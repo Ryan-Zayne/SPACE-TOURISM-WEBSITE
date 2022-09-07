@@ -196,8 +196,8 @@ button {
 
     .nav-bar {
         z-index: 10;
-        background-color: hsl(var(--clr-white), 0.04);
-        backdrop-filter: blur(3rem);
+        background-color: hsl(var(--clr-white), 0.07);
+        backdrop-filter: blur(2rem);
     }
 
     /* A media query to prevent inheritance of these styles below into bigger screen sizes */
