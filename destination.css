@@ -1,6 +1,11 @@
 @import 'style.css';
 
 
+
+/*------------ */
+/*$ MOBILE VIEW $*/  /*MOBILE FIRST DESIGN*/
+/* ----------- */
+
 body.destination-page{
     background-image: url(/assets/destination/background-destination-tablet.jpg);
 }
@@ -72,6 +77,9 @@ h1 > span{
 
 
 
+/*------------ */
+/*$ TABLET VIEW $*/
+/* ----------- */
 
 @media (min-width: 768px) {
     :root{
@@ -107,6 +115,11 @@ h1 > span{
 
 
 
+
+
+/*------------ */
+/*$ DESKTOP VIEW $*/
+/* ----------- */
 
 @media (min-width: 1024px){
     

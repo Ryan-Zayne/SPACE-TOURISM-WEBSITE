@@ -361,7 +361,7 @@ button {
     }
 
     .list-item, .list-item > a{
-        position: relative; /* Enables the underline indicator to work*/
+        position: relative;  /* Enables the underline indicator to work*/
         cursor: pointer;
         display: inherit;
         align-items: center;
@@ -416,10 +416,9 @@ button {
         content: '';
         position: absolute;
         height: 1px;
-        width:  55%;                /* This was what finally helped to prevent the line from touching logo 
-                                    while the translation below helped to keep a bit of it inside the navbar*/
-        
-        
+        width:  55%;             /* This was what finally helped to prevent the line 
+                                    from touching the logo while the translation below helped to keep a bit of it inside the navbar
+                                    */
         transform: translateX(-42vw);
         background-color: hsl( var(--clr-white), 0.25);
     }

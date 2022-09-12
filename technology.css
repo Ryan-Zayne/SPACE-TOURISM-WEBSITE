@@ -1,5 +1,10 @@
 @import 'crew.css';
 
+
+/*------------ */
+/*$ MOBILE VIEW $*/  /*MOBILE FIRST DESIGN*/
+/* ----------- */
+
 :root{
     --fs-500: 1.4rem;
 }
@@ -50,6 +55,11 @@ body.technology-page{
 
 
 
+
+/*------------ */
+/*$ TABLET VIEW $*/
+/* ----------- */
+
 @media (min-width: 768px){
 
     :root{
@@ -86,6 +96,11 @@ body.technology-page{
 }
 
 
+
+
+/*------------ */
+/*$ DESKTOP VIEW $*/
+/* ----------- */
 
 @media (min-width: 1024px){
 
