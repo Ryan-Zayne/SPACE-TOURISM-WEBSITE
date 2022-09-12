@@ -27,14 +27,10 @@ body.crew-page{
 }
 
 .main-section{
+    width: initial;
     max-width: initial;
     position: relative;
 }
-
-.image-holder{
-    width: clamp(17rem, 35vw, 42rem);
-}
-
 
 .main-section::after{
     content: '';
@@ -45,6 +41,10 @@ body.crew-page{
     background-color: #383B4B;
 }
 
+.image-holder{
+    width: clamp(17rem, 35vw, 30rem);
+}
+
 .slider-panel {
     cursor: pointer;
     display: flex;
@@ -52,7 +52,6 @@ body.crew-page{
     gap: 1.6rem;
     margin-block: 3.5rem;
 }
-
 
 .slider-panel input{
     display: none;
@@ -74,12 +73,20 @@ body.crew-page{
     background-color: hsl( var(--clr-white) );
 }
 
-.secondary-section h2{
+.secondary-section > h1{
+    display: none;
+}
+
+.crew-article > h2{
     color: hsl( var(--clr-white), 0.5 );
 }
 
-.secondary-section h3{
+.crew-article > h3{
     margin-block: 0.5rem 1.6rem;
+}
+
+.crew-article > p{
+    width: clamp(32.8rem, 62.5vw, 46rem);
 }
 
 
@@ -106,23 +113,29 @@ body.crew-page{
         display: none;
     }
 
-    h1{
-        position: initial;
+    .main-section > h1{
+        display: none;
+    }
+
+    .secondary-section > h1{
+        display: flex;
+        position: absolute;
+        top: 0rem;
+        align-self: flex-start;
+        margin-left: 4rem;
+    }
+
+    .secondary-section{
+        width: 100%; /*unsetting the width prop set in destination.css for the section*/
+        flex-direction: column-reverse;
+        padding: 7rem 0 0;
+        position: relative;
     }
 
     .slider-panel {
         margin-block: 4.6rem;
     }
-
-    .secondary-section{
-        width: initial;
-        flex-direction: column-reverse;
-        margin-top: 7rem;
-    }
-
-    .crew-article p{
-        width: 51rem;
-    }
+    
 }
 
 
@@ -140,24 +153,24 @@ body.crew-page{
         background-image: url(/assets/crew/background-crew-desktop.jpg);
     }
 
+    .image-holder{
+        width: 35rem;
+    } 
+
     .main-container{
         flex-direction: row-reverse;
         padding-inline: clamp(7rem, 6vw, 10rem);
         padding-top: 0;
     }
 
-    .main-section {
-        padding: 0;
-    }
-
-    h1 {
-        position: absolute;
-        left: -58.5rem;
-        top: 0;
+    .secondary-section > h1{
+        margin-left: 0;
     }
 
     .secondary-section {
+        min-width: 50rem;
         align-items: flex-start;
+        padding: 15rem 0 0;
     }
 
     .slider-panel{
@@ -168,11 +181,11 @@ body.crew-page{
         width: 1.5rem;
     }
 
-    .crew-article p{
+    .crew-article > p{
         width: 44.7rem;
     }
 
-    .secondary-section h3{
+    .crew-article > h3{
         margin-block: 1rem 2rem;
     }
 

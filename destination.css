@@ -25,7 +25,18 @@ body.destination-page{
 
 
 .image-holder{
-    width: clamp(17rem, 27vw, 43rem);
+    width: clamp(17rem, 30vw, 45rem);
+}
+
+.main-container{
+    padding-bottom: 4.6rem;
+}
+
+.main-section{
+    gap: 3.2rem;
+    padding-inline: 0;
+    max-width: none;
+    width: 100%;
 }
 
 h1{
@@ -39,13 +50,6 @@ h1 > span{
     opacity: 0.25;
 }
 
-.main-container{
-    padding-bottom: 4.6rem;
-}
-
-.main-section{
-    gap: 3.2rem;
-}
 
 .secondary-section{
     display: flex;
@@ -83,13 +87,14 @@ h1 > span{
         height: 3.4rem;
         gap: 3.6rem;
     }
-    
+
     .main-section{
         gap: 6rem;
     }
-    
-    h1{
-        transform: translateX(-19rem);
+
+    .main-section > h1{
+        align-self: flex-start; 
+        margin-left: 3.8rem;
     }
 
     .detail-holder{
@@ -113,15 +118,19 @@ h1 > span{
         padding: 7.6rem 8rem 8rem 12rem;
     }
 
-    h1{
-        transform: translateX(-8rem);
+    .main-section > h1{
+        margin-left: -3rem;
     }
 
     .secondary-section{
         padding-inline: 0;
         text-align: initial;
         align-items: initial;
-        width: 49ch;
+        width: 47ch;
+    }
+
+    .tab-article > p{
+        min-width: 43ch;
     }
 
     .detail-holder{

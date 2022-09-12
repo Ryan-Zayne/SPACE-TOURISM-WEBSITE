@@ -1,26 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/shared/logo.svg" />
+	<link rel="stylesheet" href="technology.css" />
+	<title>Space tourism website</title>
 </head>
-<body>
 
-  03 Space launch 101
+<body class="technology-page">
+	<!-- Header starts-->
+	<header class="header">
+		<a href="index.html" class="logo">
+			<img src="/assets/shared/logo.svg" alt="site-logo">
+		</a>
+
+		<!-- Hamburger icon -->
+		<button class="hamburger">
+			<!-- //CSS background-image here-->
+		</button>
+
+		<!-- Navbar starts-->
+		<nav class="nav-bar">
+			<ul class="nav-list uppercase letter-spacing-2 ff-sans-cond fs-200">
+				<li class="list-item"><a class="underline-indicators" href="index.html"><span class="list-item-number">00</span>Home</a></li>
+				<li class="list-item"><a class="underline-indicators" href="destination.html"><span class="list-item-number">01</span>Destination</a></li>
+				<li class="list-item"><a class="underline-indicators" href="crew.html"><span class="list-item-number">02</span>Crew</a></li>
+				<li class="list-item"><a class="underline-indicators" href="technology.html"><span class="list-item-number">03</span>Technology</a></li>
+			</ul>
+		</nav>
+		<!-- Navbar ends -->
+	</header>
 
 
-  The terminology...
-  Launch vehicle
+	<main class="main-container">
+		<section class="main-section">
+			<h1 class="letter-spacing-2 ff-sans-cond text-accent fs-400 uppercase">
+				<span>03</span> Space launch 101
+			</h1>
 
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+			<picture id="commander-image" class="image-holder">
+				<source media="(min-width: 1024px)" srcset="/assets/technology/image-launch-vehicle-portrait.jpg">
+				<img src="/assets/technology/image-launch-vehicle-landscape.jpg" alt="">
+			</picture>
 
-  
+			<picture id="specialist-image" class="image-holder" hidden>
+				<source media="(min-width: 1024px)" srcset="/assets/technology/image-spaceport-portrait.jpg">
+				<img src="/assets/technology/image-spaceport-landscape.jpg" alt="">
+			</picture>
+
+			<picture id="pilot-image" class="image-holder" hidden>
+				<source media="(min-width: 1024px)" srcset="/assets/technology/image-space-capsule-portrait.jpg">
+				<img src="/assets/technology/image-space-capsule-landscape.jpg" alt="">
+			</picture>
+		</section>
+
+		<section class="secondary-section">
+			<h1 class="letter-spacing-2 ff-sans-cond text-accent fs-400 uppercase">
+				<span>03</span> Space launch 101
+			</h1>
+			<!-- Slider Panel -->
+			<div class="slider-panel">
+				<input data-image="commander-image" aria-controls="commander-article" type="radio" name="slider" id="slide-1" checked>
+				<label for="slide-1">1</label>
+
+				<input data-image="specialist-image" aria-controls="specialist-article" type="radio" name="slider" id="slide-2">
+				<label for="slide-2">2</label>
+
+				<input data-image="pilot-image" aria-controls="pilot-article" type="radio" name="slider" id="slide-3">
+				<label for="slide-3">3</label>
+			</div>
+			<!-- Slider ends -->
+
+			<!-- Articles begin -->
+			<article id="commander-article" class="crew-article">
+				<h2 class="ff-sans-cond text-accent letter-spacing-2 uppercase fs-500">The terminology...</h2>
+				<h3 class="ff-serif uppercase fs-600">Launch vehicle</h3>
+				<p class="text-accent fs-300">
+					A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
+					payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+					WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall,
+					it's quite an awe-inspiring sight on the launch pad!
+				</p>
+			</article>
+
+			<article id="specialist-article" class="crew-article" hidden>
+				<h2 class="ff-sans-cond letter-spacing-2 uppercase fs-500">The terminology...</h2>
+				<h3 class="ff-serif uppercase fs-600">Spaceport</h3>
+				<p class="text-accent fs-300">
+					A spaceport or cosmodrome is a site for launching (or receiving) spacecraft,
+					by analogy to the seaport for ships or airport for aircraft. Based in the
+					famous Cape Canaveral, our spaceport is ideally situated to take advantage
+					of the Earth’s rotation for launch.
+				</p>
+			</article>
+
+			<article id="pilot-article" class="crew-article" hidden>
+				<h2 class="ff-sans-cond text-accent letter-spacing-2 uppercase fs-500">The terminology...</h2>
+				<h3 class="ff-serif uppercase fs-600">Space capsule</h3>
+				<p class="text-accent fs-300">
+					A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
+					capsule to reenter the Earth's atmosphere without wings. Our capsule is where
+					you'll spend your time during the flight. It includes a space gym, cinema,
+					and plenty of other activities to keep you entertained.
+				</p>
+			</article>
+		</section>
+
+	</main>
+	<script src="navigation.js"></script>
+	<script src="slider.js"></script>
 </body>
+
 </html>
