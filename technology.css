@@ -89,6 +89,10 @@ body.technology-page{
 
 @media (min-width: 1024px){
 
+    body.technology-page{
+        background-image: url(/assets/technology/background-technology-desktop.jpg);
+    }
+
     .main-container{
         flex-direction: row-reverse;
         padding-inline: 9rem 1.5rem;
