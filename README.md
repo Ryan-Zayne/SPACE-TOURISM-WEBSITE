@@ -54,7 +54,8 @@ In summary, I truly learnt a worthy chunk of good stuff whilst building this sit
 
 Below are some css and js solutions I'm really proud, since I came up with them after a good struggle:
 
-```CSS
+```
+ CSS
  This source code of the transparent line between logo and navbar
 
 .nav-bar::before{
@@ -67,7 +68,9 @@ Below are some css and js solutions I'm really proud, since I came up with them 
     }   /*PS: Even the King of CSS(yeah, you know the guy🧔), struggled with this aspect of the project too💆‍♂️... Just a testament to how rough the issue was😑*/
 ```
 
-```JS
+```
+  JS
+  Customized hamburger js
 
 hamburgerToggle.addEventListener("click", () => {
   navBar.classList.toggle("menu-toggle");
