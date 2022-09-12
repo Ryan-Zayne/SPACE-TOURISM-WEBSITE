@@ -22,7 +22,7 @@ body.technology-page{
 }
 
 .slider-panel > label{
-    width: clamp(4rem, 6vw, 7rem);
+    width: clamp(4rem, 6vw, 6.5rem);
     display: grid;
     place-content: center;
     border-radius: 50%;
