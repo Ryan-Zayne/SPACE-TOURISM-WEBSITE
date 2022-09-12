@@ -100,5 +100,5 @@ I'd want to learn react and tailwind next after this project because for one, I 
 
 ## Acknowledgments
 
-I'd like to give a hattip to Kevin Powell's solution on scrimba as I picked up some techniques as well as code refactor tips from his follow along. A big shout-out to his work on the internet as a hardcore css evangelist. You have my undiluted respect man🧎‍♂️.
+I'd like to give a quick hat tip to Kevin Powell's solution on scrimba as I picked up some techniques as well as code refactor tips from his follow along. A big shout-out to his work on the internet as a hardcore css evangelist. You have my undiluted respect man🧎‍♂️.
 
