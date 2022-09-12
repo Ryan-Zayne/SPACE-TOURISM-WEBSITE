@@ -3,7 +3,6 @@
 
 body.destination-page{
     background-image: url(/assets/destination/background-destination-tablet.jpg);
-    background-position: initial;
 }
 
 .tabs-list{
@@ -26,13 +25,11 @@ body.destination-page{
 
 
 .image-holder{
-    width: 100%; /*I did this like this so it would stop overflowing from the main-section container*/
-    max-width: max(17rem, 38.7vw);
+    width: clamp(17rem, 27vw, 43rem);
 }
 
 h1{
     display: flex;
-    min-width: 22rem;
     gap: 1.5rem;
     justify-content: center;
 }
@@ -40,6 +37,10 @@ h1{
 h1 > span{
     font-weight: 700;
     opacity: 0.25;
+}
+
+.main-container{
+    padding-bottom: 4.6rem;
 }
 
 .main-section{
@@ -52,17 +53,19 @@ h1 > span{
     padding-inline: 2rem;
     align-items: center;
     text-align: center;
-    width: clamp(43ch, 60vw, 58ch);  /*To limit the number of characters on one line in this section*/
+    width: clamp(42ch, 60vw, 58ch);  /*This is put here instead of on the paragraaph element to ensure that the border-divider is the same character width as the paragraph in this section*/
 }
 
 .detail-holder{
     display: flex;
     flex-direction: column;
     gap: 2.2rem;
-    margin: 3.2rem 0 4.6rem;
+    margin-top: 3.2rem;
     border-top: 2px solid #383B4B;
     padding-top: 3.2rem;
 }
+
+
 
 
 
@@ -99,6 +102,7 @@ h1 > span{
 
 
 
+
 @media (min-width: 1024px){
     
     :root{
@@ -106,8 +110,7 @@ h1 > span{
     }
 
     .main-container{
-        margin-top: 7.6rem;
-        padding-inline: 12rem 8rem;
+        padding: 7.6rem 8rem 8rem 12rem;
     }
 
     h1{
@@ -115,15 +118,15 @@ h1 > span{
     }
 
     .secondary-section{
-        width: 54ch;
         padding-inline: 0;
         text-align: initial;
         align-items: initial;
+        width: 49ch;
     }
 
     .detail-holder{
-        margin-bottom: 4rem;
         justify-content: flex-start;
+        margin-top: 5.4rem;
         gap: 10rem;
     }
     

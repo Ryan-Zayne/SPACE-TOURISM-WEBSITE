@@ -10,18 +10,18 @@ function changeTabPanel(e) {
     const targetImage = targetTab.getAttribute("data-image")
     const tabContainer = targetTab.parentNode;
     const secondaryContainer = tabContainer.parentNode;
-    const mainContainer = document.querySelector('.main-section')
-
+    const primaryContainer = secondaryContainer.previousElementSibling;
+    
     secondaryContainer
         .querySelectorAll('.tab-article')
         .forEach((article) => article.setAttribute('hidden', true));
 
     secondaryContainer.querySelector(`#${targetArticle}`).removeAttribute('hidden');
 
-    mainContainer
+    primaryContainer
         .querySelectorAll('.image-holder')
         .forEach((image) => image.setAttribute('hidden', true));
 
-    mainContainer.querySelector(`#${targetImage}`).removeAttribute('hidden');
+    primaryContainer.querySelector(`#${targetImage}`).removeAttribute('hidden');
 
 }   
