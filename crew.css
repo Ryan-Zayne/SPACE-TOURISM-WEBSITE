@@ -107,10 +107,7 @@ body.crew-page{
     }
 
     h1{
-        position: absolute;
-        transform: 0;
-        left: -4.8rem;
-        top: -37rem;
+        position: initial;
     }
 
     .slider-panel {
