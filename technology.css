@@ -17,6 +17,10 @@ body.technology-page{
     padding-inline: 0;
 }
 
+.main-section::after{
+    display: none;
+}
+
 .secondary-section{
     width: initial;
     padding-inline: 0;
