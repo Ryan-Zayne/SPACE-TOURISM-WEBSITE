@@ -271,7 +271,7 @@ button {
         align-items: center;
         gap: 8.1rem;
         margin-top: 4.8rem;
-        padding-bottom: clamp(3.5rem, 9.8vh, 9rem); /*This was done to eliminate the vertical overflow caused by the explore button animation*/
+        padding-bottom: clamp(3.5rem, 11.7vh, 9rem); /*This was done to eliminate the vertical overflow caused by the explore button animation*/
     }
 
     .main-section {
@@ -429,14 +429,14 @@ button {
 
     .main-container{
         padding-top: 25.1rem;
-        padding-inline: 8rem;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: row;
     }
 
     .main-section{
         align-items: initial;
         text-align: initial;
+        max-width: 50ch;
     }
 
 

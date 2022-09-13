@@ -171,7 +171,6 @@ body.crew-page{
 
     .main-container{
         flex-direction: row-reverse;
-        padding-inline: clamp(7rem, 6vw, 10rem);
         padding-top: 0;
     }
 
