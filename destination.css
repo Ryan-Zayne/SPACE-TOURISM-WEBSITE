@@ -62,7 +62,11 @@ h1 > span{
     padding-inline: 2rem;
     align-items: center;
     text-align: center;
+<<<<<<< HEAD
     width: clamp(34ch, 60vw, 58ch);  /*This is put here instead of on the paragraaph element to ensure that the border-divider is the same character width as the paragraph in this section*/ 
+=======
+    width: clamp(34ch, 60vw, 58ch);  /*This is put here instead of on the paragraaph element to ensure that the border-divider is the same character width as the paragraph in this section*/
+>>>>>>> 80bd932bfd59f9bbd3868cddb7c4d9afe53c2973
 }
 
 .detail-holder{
