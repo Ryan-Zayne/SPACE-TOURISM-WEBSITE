@@ -205,17 +205,17 @@ button {
         .nav-bar{
             width: 0;
             position: fixed;
-            inset: 0 auto 0 0;
+            inset: 0 0 0 auto;
             transition: width 150ms ease;
                                                 /* Using this transition alone will make the exit
                                                     and entrance of the hamburger run at the same speed;
 
-                                                    BUT I commented it out BECAUSE the width transition gets 
-                                                    inherited on the bigger screens as well, causing a weird pop up flash of the hamburger nav menu*/
+                                                    BUT I commented it out (OR maybe not😅) BECAUSE it causes a weird pop up flash of the hamburger nav menu when changing screen from desktop to mobile*/
         }
 
         .nav-bar.menu-toggle {
             width: 25.1rem;
+            resize: horizontal;
             transition: width 500ms ease;
                                         /*  Using This transition along with the one above makes the hamburger entrance
                                             speed differ from the exit; 
@@ -223,7 +223,6 @@ button {
                                             If used alone, it affects only the entrance speed and neglects exit */
         }
 
-        .nav-bar::before
 
         .hamburger {
             background-color: transparent;
@@ -236,6 +235,8 @@ button {
         }
     
         .hamburger.close {
+            position: fixed;
+            right: 3rem;
             background-image: url(assets/shared/icon-close.svg);
         }
     
