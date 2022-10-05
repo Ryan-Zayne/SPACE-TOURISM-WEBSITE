@@ -1,3 +1,5 @@
+import * as navigationJs from './navigation.js';
+
 const sliderPanel = document.querySelectorAll('[type="radio"]');
 
 
@@ -13,7 +15,7 @@ function changeSlidePanel(e) {
     console.log(targetArticle)
     const secondaryContainer = slideContainer.parentNode;
     const primaryContainer = secondaryContainer.previousElementSibling;
-    
+
     secondaryContainer
         .querySelectorAll('.crew-article')
         .forEach((article) => article.setAttribute('hidden', true));

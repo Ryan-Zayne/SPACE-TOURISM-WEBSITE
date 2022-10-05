@@ -5,5 +5,3 @@ hamburgerToggle.addEventListener("click", () => {
   navBar.classList.toggle("menu-toggle");
   hamburgerToggle.classList.toggle("close");
 });
-
-

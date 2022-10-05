@@ -1,3 +1,6 @@
+import * as navigationJs from './navigation.js';
+
+
 const tabPanel = document.querySelectorAll('.tab-span');
 
 tabPanel.forEach( (tab) => tab.addEventListener("click", changeTabPanel));
