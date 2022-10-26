@@ -1,4 +1,4 @@
-import * as navigationJs from './navigation.js';
+import './navigation.js';
 
 const tabPanel = document.querySelectorAll('.tab-span');
 
