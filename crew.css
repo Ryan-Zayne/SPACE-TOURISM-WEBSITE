@@ -2,18 +2,19 @@
 
 
 /*------------ */
-/*$ MOBILE VIEW $*/  /*MOBILE FIRST DESIGN*/
+/*$ MOBILE VIEW $*/
+/*MOBILE FIRST DESIGN*/
 /* ----------- */
 
-:root{
-    --fs-600: 2.4rem;
-    --fs-500: 1.6rem;
-    --fs-400: 1.6rem;
-    --fs-300: 1.5rem;
+:root {
+	--fs-600: 2.4rem;
+	--fs-500: 1.6rem;
+	--fs-400: 1.6rem;
+	--fs-300: 1.5rem;
 }
 
-body.crew-page{
-    background-image: url(/assets/crew/background-crew-mobile.jpg);
+body.crew-page {
+	background-image: url(/assets/crew/background-crew-mobile.jpg);
 }
 
 /* body.crew-page::before{
@@ -26,72 +27,72 @@ body.crew-page{
                                         //  but it seems it isnt necessary
 } */
 
-.main-container{
-    gap: 0;
-    padding-bottom: 8rem;
+.main-container {
+	gap: 0;
+	padding-bottom: 8rem;
 }
 
-.main-section{
-    width: initial;
-    max-width: initial;
-    position: relative;
+.main-section {
+	width: initial;
+	max-width: initial;
+	position: relative;
 }
 
-.main-section::after{
-    content: '';
-    bottom: 0;
-    position: absolute;
-    width: 31.6rem;
-    height: 2px;
-    background-color: #383B4B;
+.main-section::after {
+	content: '';
+	bottom: 0;
+	position: absolute;
+	width: 31.6rem;
+	height: 2px;
+	background-color: #383B4B;
 }
 
-.image-holder{
-    width: clamp(17rem, 35vw, 30rem);
+.image-holder {
+	width: clamp(17rem, 35vw, 30rem);
 }
 
 .slider-panel {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    gap: 1.6rem;
-    margin-block: 3.5rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	gap: 1.6rem;
+	margin-block: 3.5rem;
 }
 
-.slider-panel input{
-    display: none;
+.slider-panel input {
+	display: none;
 }
 
-.slider-panel > label{
-    aspect-ratio: 1;
-    width: 1rem;
-    border-radius: 50%;
-    background-color: hsl( var(--clr-white), 0.17 );
-    cursor: pointer;
+.slider-panel > label {
+	aspect-ratio: 1;
+	width: 1rem;
+	border-radius: 50%;
+	background-color: hsl(var(--clr-white), 0.17);
+	cursor: pointer;
 }
 
-.slider-panel > label:hover{
-    background-color: hsl( var(--clr-white), 0.5 );
+.slider-panel > label:hover {
+	background-color: hsl(var(--clr-white), 0.5);
 }
 
-.slider-panel input:checked + label{ 
-    background-color: hsl( var(--clr-white) );
+.slider-panel input:checked + label {
+	background-color: hsl(var(--clr-white));
 }
 
-.secondary-section > h1{
-    display: none;
+.secondary-section > h1 {
+	display: none;
 }
 
-.crew-article > h2{
-    color: hsl( var(--clr-white), 0.5 );
+.crew-article > h2 {
+	color: hsl(var(--clr-white), 0.5);
 }
 
-.crew-article > h3{
-    margin-block: 0.5rem 1.6rem;
+.crew-article > h3 {
+	margin-block: 0.5rem 1.6rem;
 }
 
-.crew-article > p{
-    width: clamp(32.8rem, 62.5vw, 46rem);
+.crew-article > p {
+	width: clamp(32.8rem, 62.5vw, 46rem);
 }
 
 
@@ -100,50 +101,51 @@ body.crew-page{
 /*$ TABLET VIEW $*/
 /* ----------- */
 
-@media (min-width: 768px){
-    :root{
-        --fs-600: 4rem;
-        --fs-500: 2.4rem;
-        --fs-400: 2rem;
-        --fs-300: 1.6rem;
-    }
+@media (min-width: 768px) {
+	:root {
+		--fs-600: 4rem;
+		--fs-500: 2.4rem;
+		--fs-400: 2rem;
+		--fs-300: 1.6rem;
+	}
 
-    body.crew-page{
-        background-image: url(/assets/crew/background-crew-tablet.jpg);
-    }
+	body.crew-page {
+		background-image: url(/assets/crew/background-crew-tablet.jpg);
+	}
 
-    .main-container{
-        flex-direction: column-reverse;
-        padding-bottom: 0;
-    }
+	.main-container {
+		flex-direction: column-reverse;
+		padding-bottom: 0;
+	}
 
-    .main-section::after{
-        display: none;
-    }
+	.main-section::after {
+		display: none;
+	}
 
-    .main-section > h1{
-        display: none;
-    }
+	.main-section > h1 {
+		display: none;
+	}
 
-    .secondary-section > h1{
-        display: flex;
-        position: absolute;
-        top: 0rem;
-        align-self: flex-start;
-        margin-left: 4rem;
-    }
+	.secondary-section > h1 {
+		display: flex;
+		position: absolute;
+		top: 0rem;
+		align-self: flex-start;
+		margin-left: 4rem;
+	}
 
-    .secondary-section{
-        width: 100%; /*unsetting the width prop set in destination.css for the section*/
-        flex-direction: column-reverse;
-        padding: 7rem 0 0;
-        position: relative;
-    }
+	.secondary-section {
+		width: 100%;
+		/*unsetting the width prop set in destination.css for the section*/
+		flex-direction: column-reverse;
+		padding: 7rem 0 0;
+		position: relative;
+	}
 
-    .slider-panel {
-        margin-block: 4.6rem;
-    }
-    
+	.slider-panel {
+		margin-block: 4.6rem;
+	}
+
 }
 
 
@@ -153,51 +155,51 @@ body.crew-page{
 /*$ DESKTOP VIEW $*/
 /* ----------- */
 
-@media (min-width: 1024px){
-    :root{
-    --fs-600: 5.6rem;
-    --fs-500: 3.2rem;
-    --fs-400: 2.8rem;
-    --fs-300: 1.8rem;
-    }
+@media (min-width: 1024px) {
+	:root {
+		--fs-600: 5.6rem;
+		--fs-500: 3.2rem;
+		--fs-400: 2.8rem;
+		--fs-300: 1.8rem;
+	}
 
-    body.crew-page{
-        background-image: url(/assets/crew/background-crew-desktop.jpg);
-    }
+	body.crew-page {
+		background-image: url(/assets/crew/background-crew-desktop.jpg);
+	}
 
-    .image-holder{
-        width: 35rem;
-    } 
+	.image-holder {
+		width: 35rem;
+	}
 
-    .main-container{
-        flex-direction: row-reverse;
-        padding-top: 0;
-    }
+	.main-container {
+		flex-direction: row-reverse;
+		padding-top: 0;
+	}
 
-    .secondary-section > h1{
-        margin-left: 0;
-    }
+	.secondary-section > h1 {
+		margin-left: 0;
+	}
 
-    .secondary-section {
-        min-width: 50rem;
-        align-items: flex-start;
-        padding: 15rem 0 0;
-    }
+	.secondary-section {
+		min-width: 50rem;
+		align-items: flex-start;
+		padding: 15rem 0 0;
+	}
 
-    .slider-panel{
-        margin-block: 9.5rem 3rem;
-    }
+	.slider-panel {
+		margin-block: 9.5rem 3rem;
+	}
 
-    .slider-panel > label{
-        width: 1.5rem;
-    }
+	.slider-panel > label {
+		width: 1.5rem;
+	}
 
-    .crew-article > p{
-        width: 44.7rem;
-    }
+	.crew-article > p {
+		width: 44.7rem;
+	}
 
-    .crew-article > h3{
-        margin-block: 1rem 2rem;
-    }
+	.crew-article > h3 {
+		margin-block: 1rem 2rem;
+	}
 
 }

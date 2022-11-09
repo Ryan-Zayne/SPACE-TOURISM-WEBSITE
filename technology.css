@@ -2,59 +2,60 @@
 
 
 /*------------ */
-/*$ MOBILE VIEW $*/  /*MOBILE FIRST DESIGN*/
+/*$ MOBILE VIEW $*/
+/*MOBILE FIRST DESIGN*/
 /* ----------- */
 
-:root{
-    --fs-500: 1.4rem;
+:root {
+	--fs-500: 1.4rem;
 }
 
-body.technology-page{
-    background-image: url(/assets/technology/background-technology-tablet.jpg);
+body.technology-page {
+	background-image: url(/assets/technology/background-technology-tablet.jpg);
 }
 
-.main-section{
-    padding-inline: 0;
+.main-section {
+	padding-inline: 0;
 }
 
-.main-section::after{
-    display: none;
+.main-section::after {
+	display: none;
 }
 
-.secondary-section{
-    width: initial;
-    padding-inline: 0;
+.secondary-section {
+	width: initial;
+	padding-inline: 0;
 }
 
-.image-holder{
-    width: 100%;
+.image-holder {
+	width: 100%;
 }
 
-.slider-panel > label{
-    width: clamp(4rem, 6vw, 6.5rem);
-    display: grid;
-    place-content: center;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid hsl( var(--clr-white), 0.17);
-    cursor: pointer;
+.slider-panel > label {
+	width: clamp(4rem, 6vw, 6.5rem);
+	display: grid;
+	place-content: center;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid hsl(var(--clr-white), 0.17);
+	cursor: pointer;
 }
 
-.slider-panel > label:hover{
-    background: none;
-    border-color: hsl( var(--clr-white));
+.slider-panel > label:hover {
+	background: none;
+	border-color: hsl(var(--clr-white));
 }
 
-.slider-panel input:checked + label{ 
-    color: black;
+.slider-panel input:checked + label {
+	color: black;
 }
 
-.crew-article > h2{
-    color: hsl( var(--clr-light) );
+.crew-article > h2 {
+	color: hsl(var(--clr-light));
 }
 
-.crew-article > p{
-    width: clamp(32.3rem, 62.5vw, 44rem);
+.crew-article > p {
+	width: clamp(32.3rem, 62.5vw, 44rem);
 }
 
 
@@ -64,38 +65,38 @@ body.technology-page{
 /*$ TABLET VIEW $*/
 /* ----------- */
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
-    :root{
-        --fs-500: 1.6rem;
-    }
+	:root {
+		--fs-500: 1.6rem;
+	}
 
-    .main-container{
-        flex-direction: column;
-        padding-bottom: 8rem;
-    }
+	.main-container {
+		flex-direction: column;
+		padding-bottom: 8rem;
+	}
 
-    .main-section{
-        align-items: flex-start;
-    }
+	.main-section {
+		align-items: flex-start;
+	}
 
-    .main-section > h1{
-        display: flex;
-        margin-left: 0.3rem;
-    }
+	.main-section > h1 {
+		display: flex;
+		margin-left: 0.3rem;
+	}
 
-    .secondary-section > h1{
-        display: none;
-    }
+	.secondary-section > h1 {
+		display: none;
+	}
 
-    .slider-panel {
-        margin-block: 5.3rem 4rem;
-    }
+	.slider-panel {
+		margin-block: 5.3rem 4rem;
+	}
 
-    .secondary-section{
-        flex-direction: column;
-        padding-top: 0;
-    }
+	.secondary-section {
+		flex-direction: column;
+		padding-top: 0;
+	}
 
 }
 
@@ -106,47 +107,47 @@ body.technology-page{
 /*$ DESKTOP VIEW $*/
 /* ----------- */
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
 
-    body.technology-page{
-        background-image: url(/assets/technology/background-technology-desktop.jpg);
-    }
+	body.technology-page {
+		background-image: url(/assets/technology/background-technology-desktop.jpg);
+	}
 
-    .main-container{
-        flex-direction: row-reverse;
-        padding-inline: 9rem 1.5rem;
-    }
+	.main-container {
+		flex-direction: row-reverse;
+		padding-inline: 9rem 1.5rem;
+	}
 
-    .crew-article > p {
-        width: 49rem;
-    }
+	.crew-article > p {
+		width: 49rem;
+	}
 
-    .secondary-section{
-        min-width: initial;
-        gap: 5rem;
-        flex-direction: row;
-        padding-top: 14rem;
-    }
+	.secondary-section {
+		min-width: initial;
+		gap: 5rem;
+		flex-direction: row;
+		padding-top: 14rem;
+	}
 
-    .slider-panel{
-        flex-direction: column;
-        margin-block: 0;
-        align-self: center;
-    }
+	.slider-panel {
+		flex-direction: column;
+		margin-block: 0;
+		align-self: center;
+	}
 
-    .main-section > h1{
-        display: none;
-    }
+	.main-section > h1 {
+		display: none;
+	}
 
-    .image-holder{
-        width: 40rem;
-    }
+	.image-holder {
+		width: 40rem;
+	}
 
-    .image-holder > img{
-        height: 47.5rem;
-    }
+	.image-holder > img {
+		height: 47.5rem;
+	}
 
-    .secondary-section > h1{
-        display: flex;
-    }
+	.secondary-section > h1 {
+		display: flex;
+	}
 }

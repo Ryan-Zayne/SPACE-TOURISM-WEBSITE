@@ -6,22 +6,22 @@
 *,
 ::before,
 ::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+		padding: 0;
+		box-sizing: border-box;
 }
 
 /* -------------------------- */
 /* Making basic style resets */
 /* ------------------------- */
 html {
-    font-size: 10px;
+	font-size: 10px;
 }
 
 html,
 body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+	scroll-behavior: smooth;
+		overflow-x: hidden;
 }
 
 h1,
@@ -31,12 +31,12 @@ h4,
 h5,
 h6,
 p {
-    font-weight: 400;
+	font-weight: 400;
 }
 
-img{
-    width: 100%;
-    display: block;
+img {
+	width: 100%;
+	display: block;
 }
 
 
@@ -44,23 +44,23 @@ input,
 select,
 textarea,
 button {
-    font-family: inherit;
+	font-family: inherit;
 }
 
 li {
-    list-style: none;
+	list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: hsl( var(--clr-white) );
+	text-decoration: none;
+	color: hsl(var(--clr-white));
 }
 
 button {
-    cursor: pointer;
-    line-height: inherit;
-    border: none;
-    outline: none;
+	cursor: pointer;
+		line-height: inherit;
+		border: none;
+		outline: none;
 }
 
 
@@ -71,56 +71,115 @@ button {
 
 /* Colors */
 
-.bg-dark { background-color: hsl( var(--clr-dark) );}
-.bg-accent { background-color: hsl( var(--clr-light) );}
-.bg-white { background-color: hsl( var(--clr-white) );}
+.bg-dark {
+	background-color: hsl(var(--clr-dark));
+}
 
-.text-dark { color: hsl( var(--clr-dark) );}
-.text-accent { color: hsl( var(--clr-light) );}
-.text-white { color: var(--clr-white);}
+.bg-accent {
+	background-color: hsl(var(--clr-light));
+}
+
+.bg-white {
+	background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+	color: hsl(var(--clr-dark));
+}
+
+.text-accent {
+	color: hsl(var(--clr-light));
+}
+
+.text-white {
+	color: var(--clr-white);
+}
 
 /* Typography */
 
-.ff-serif { font-family: var(--ff-serif); } 
-.ff-sans-cond { font-family: var(--ff-sans-cond); } 
-.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+.ff-serif {
+	font-family: var(--ff-serif);
+}
 
-.fs-900 { font-size: var(--fs-900); }
-.fs-800 { font-size: var(--fs-800); }
-.fs-700 { font-size: var(--fs-700); }
-.fs-600 { font-size: var(--fs-600); }
-.fs-500 { font-size: var(--fs-500); }
-.fs-400 { font-size: var(--fs-400); }
-.fs-300 { font-size: var(--fs-300); }
-.fs-200 { font-size: var(--fs-200); }
-.fs-100 { font-size: var(--fs-100); }
+.ff-sans-cond {
+	font-family: var(--ff-sans-cond);
+}
+
+.ff-sans-normal {
+	font-family: var(--ff-sans-normal);
+}
+
+.fs-900 {
+	font-size: var(--fs-900);
+}
+
+.fs-800 {
+	font-size: var(--fs-800);
+}
+
+.fs-700 {
+	font-size: var(--fs-700);
+}
+
+.fs-600 {
+	font-size: var(--fs-600);
+}
+
+.fs-500 {
+	font-size: var(--fs-500);
+}
+
+.fs-400 {
+	font-size: var(--fs-400);
+}
+
+.fs-300 {
+	font-size: var(--fs-300);
+}
+
+.fs-200 {
+	font-size: var(--fs-200);
+}
+
+.fs-100 {
+	font-size: var(--fs-100);
+}
 
 .fs-900,
 .fs-800,
 .fs-700,
 .fs-600 {
-    line-height: 1.1;
+	line-height: 1.1;
 }
 
-.letter-spacing-1  { letter-spacing: 2.35px; }
-.letter-spacing-2 { letter-spacing: 2.7px; } 
-.letter-spacing-3 { letter-spacing: 4.75px; }
+.letter-spacing-1 {
+	letter-spacing: 2.35px;
+}
+
+.letter-spacing-2 {
+	letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+	letter-spacing: 4.75px;
+}
 
 .uppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
-.underline-indicators:hover::after, .underline-indicators:active::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    background-color: hsl( var(--clr-white), 0.7);
+.underline-indicators:hover::after,
+.underline-indicators:active::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	background-color: hsl(var(--clr-white), 0.7);
 }
 
-.underline-indicators:active::after{
-    background-color: hsl( var(--clr-white) );
+.underline-indicators:active::after {
+	background-color: hsl(var(--clr-white));
 }
 
 
@@ -130,189 +189,194 @@ button {
 /* ----------------- */
 
 :root {
-    /* Colors */
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
-    --clr-white: 0, 0%, 100%;
+	/* Colors */
+		--clr-dark: 230 35% 7%;
+		--clr-light: 231 77% 90%;
+		--clr-white: 0, 0%, 100%;
 
-    /* Font-sizes */
-    --fs-900: 15rem;
-    --fs-800: 8rem;
-    --fs-700: 5.6rem;
-    --fs-600: 2rem;
-    --fs-500: 2.8rem;
-    --fs-400: 1.6rem;
-    --fs-300: 1.5rem;
-    --fs-200: 1.4rem;
-    --fs-100: 1.4rem;
+	/* Font-sizes */
+		--fs-900: 15rem;
+		--fs-800: 8rem;
+		--fs-700: 5.6rem;
+		--fs-600: 2rem;
+		--fs-500: 2.8rem;
+		--fs-400: 1.6rem;
+		--fs-300: 1.5rem;
+		--fs-200: 1.4rem;
+		--fs-100: 1.4rem;
 
-    /* Font families */
-    --ff-serif: "Bellefair", serif;
-    --ff-sans-cond: "Barlow Condensed", sans-serif;
-    --ff-sans-normal: "Barlow", sans-serif;
+	/* Font families */
+		--ff-serif: "Bellefair", serif;
+		--ff-sans-cond: "Barlow Condensed", sans-serif;
+		--ff-sans-normal: "Barlow", sans-serif;
 }
 
 
 
 
 /*------------ */
-/*$ MOBILE VIEW $*/  /*MOBILE FIRST DESIGN*/
+/*$ MOBILE VIEW $*/
+/*MOBILE FIRST DESIGN*/
 /* ----------- */
 
 /* Setting up the body*/
-    body {
-        position: relative;
-        font-size: 1.6rem;
-        font-family: var(--ff-sans-normal);
-        color: hsl(var(--clr-white));
-        line-height: 1.6;
-        background-color: hsl(var(--clr-dark));
-        background-attachment: fixed;
-        background-size: cover;
-    }
+body {
+	position: relative;
+	font-size: 1.6rem;
+	font-family: var(--ff-sans-normal);
+	color: hsl(var(--clr-white));
+	line-height: 1.6;
+	background-color: hsl(var(--clr-dark));
+	background-attachment: fixed;
+	background-size: cover;
+}
 
-    body.home-page{
-        background-image: url(./assets/home/background-home-mobile.jpg);
-        background-position: center;
-    }
+body.home-page {
+	background-image: url(./assets/home/background-home-mobile.jpg);
+	background-position: center;
+}
 
-    .logo{
-        width: clamp(4rem, 5vw, 4.8rem);         /* 5vw in the middle acts like the value by which the 
+.logo {
+	width: clamp(4rem, 5vw, 4.8rem);
+	/* 5vw in the middle acts like the value by which the 
                                                     element shrinks and grows to the limit of the min and max value. It helps reduce the need for
                                                     size related media queries, Whether font-size or margin or anything else you might use a media query for. 
                                                     (P.S: Always set them to be equal to or slightly above the max value for best effect) */
-        aspect-ratio: 1;
-    }
+	aspect-ratio: 1;
+	}
 
-    .header {
-        display: flex;
-        padding: 2.4rem 3.3rem 0 2.8rem;
-        justify-content: space-between;
-        align-items: center;
-    }
+.header {
+	display: flex;
+	padding: 2.4rem 3.3rem 0 2.8rem;
+	justify-content: space-between;
+	align-items: center;
+}
 
-    .nav-bar {
-        z-index: 10;
-        background-color: hsl(var(--clr-white), 0.07);
-        backdrop-filter: blur(3rem) saturate(200%);
-    }
-
-
+.nav-bar {
+	z-index: 10;
+	background-color: hsl(var(--clr-white), 0.07);
+	backdrop-filter: blur(3rem) saturate(130%);
+	}
 
 
-    /* A media query to prevent inheritance of these styles below into bigger screen sizes */
-    @media screen and (max-width: 767.999px) {
-        .nav-bar{
-            width: 0;
-            position: fixed;
-            inset: 0 0 0 auto;
-            transition: width 150ms ease;
-                                                /* Using this transition alone will make the exit
+
+
+/* A media query to prevent inheritance of these styles below into bigger screen sizes */
+@media screen and (max-width: 767.999px) {
+	.nav-bar {
+			width: 0;
+			position: fixed;
+			inset: 0 0 0 auto;
+			transition: width 150ms ease;
+			/* Using this transition alone will make the exit
                                                     and entrance of the hamburger run at the same speed;
 
                                                     BUT I commented it out (OR maybe not😅) BECAUSE it causes a weird pop up flash of the hamburger nav menu when changing screen from desktop to mobile*/
-        }
+	
 
-        .nav-bar.menu-toggle {
-            width: 25.1rem;
-            transition: width 500ms ease;
-                                        /*  Using This transition along with the one above makes the hamburger entrance
+		.nav-bar.menu-toggle {
+			width: 25.1rem;
+			transition: width 500ms ease;
+			/*  Using This transition along with the one above makes the hamburger entrance
                                             speed differ from the exit; 
                                             
                                             If used alone, it affects only the entrance speed and neglects exit */
-        }
+	
 
 
-        .hamburger {
-            background-color: transparent;
-            background-size: 100% 100%;
-            height: 2.1rem;
-            width: 2.4rem;
-            z-index: 20;
-            background-image: url(assets/shared/icon-hamburger.svg);
-            transition: transform 100ms linear;
-        }
-    
-        .hamburger.close {
-            position: fixed;
-            right: 3rem;
-            background-image: url(assets/shared/icon-close.svg);
-        }
-    
-        .hamburger:active {
-            transform: rotate(180deg);
-            transition: all 0.4s ease;
-        }
+		.hamburger {
+			background-color: transparent;
+			background-size: 100% 100%;
+			height: 2.1rem;
+			width: 2.4rem;
+			z-index: 20;
+			background-image: url(assets/shared/icon-hamburger.svg);
+			transition: transform 100ms linear;
+		}
+	
+		.hamburger.close {
+			position: fixed;
+			right: 3rem;
+			background-image: url(assets/shared/icon-close.svg);
+		}
+	
+		.hamburger:active {
+			transform: rotate(180deg);
+			transition: all 0.4s ease;
+		}
 
 
-    }
+}
 
-    .nav-list {
-        display: flex;
-        flex-direction: column;
-        padding: 11.8rem 0 0 2.9rem;
-        gap: 3.2rem;
-    }
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	padding: 11.8rem 0 0 2.9rem;
+	gap: 3.2rem;
+}
 
-    .list-item > a{
-        display: flex;
-        gap: 1rem;
-    }
+.list-item > a {
+	display: flex;
+	gap: 1rem;
+}
 
-    .list-item-number {
-        font-weight: 700;
-    }
+.list-item-number {
+	font-weight: 700;
+}
 
-    .main-container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 8.1rem;
-        margin-top: 4.8rem;
-        padding-bottom: clamp(3.5rem, 11.7vh, 9rem); /*This was done to eliminate the vertical overflow caused by the explore button animation*/
-    }
+.main-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8.1rem;
+	margin-top: 4.8rem;
+	padding-bottom: clamp(3.5rem, 11.7vh, 9rem);
+		/*This was done to eliminate the vertical overflow caused by the explore button animation*/
+	}
 
-    .main-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.6rem;
-        padding-inline: 2.4rem;
-        text-align: center;
-        max-width: 45ch;  /*To limit the number of characters on one line in this section*/
-    }
+.main-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.6rem;
+	padding-inline: 2.4rem;
+	text-align: center;
+	max-width: 45ch;
+		/*To limit the number of characters on one line in this section*/
+	}
 
-    .large-button {
-        display: inline-grid;
-        position: relative;
-        place-content: center;
-        letter-spacing: 1.5px;
-        z-index: 1;
-        background-color: hsl(var(--clr-white));
-        color: hsl(var(--clr-dark));
-        width: clamp(15rem, 26vw, 30rem);
-        aspect-ratio: 1;
-        border-radius: 50%;
-    }
+.large-button {
+	display: flex;
+		position: relative;
+	justify-content: center;
+		align-items: center;
+		letter-spacing: 1.5px;
+		z-index: 1;
+		background-color: hsl(var(--clr-white));
+		color: hsl(var(--clr-dark));
+		width: clamp(15rem, 26vw, 30rem);
+		aspect-ratio: 1;
+		border-radius: 50%;
+	}
 
-    .large-button::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background-color: hsl(var(--clr-white), 0.1);
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity 500ms linear, transform 750ms ease-in-out;
-    }
+.large-button::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: hsl(var(--clr-white), 0.1);
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
 
-    .large-button:hover::after {
-        opacity: 1;
-        transform: scale(1.45);
-    }
+.large-button:hover::after {
+	opacity: 1;
+	transform: scale(1.45);
+}
 
 
 
@@ -323,63 +387,64 @@ button {
 
 @media (min-width: 768px) {
 
-    :root {
-        /* Font-sizes */
-        --fs-900: 15rem;
-        --fs-800: 10rem;
-        --fs-600: 2.6rem;
-        --fs-500: 2.8rem;
-        --fs-400: 2rem;
-        --fs-300: 1.6rem;
-        --fs-200: 1.4rem;
-    }
+	:root {
+			/* Font-sizes */
+			--fs-900: 15rem;
+			--fs-800: 10rem;
+			--fs-600: 2.6rem;
+			--fs-500: 2.8rem;
+			--fs-400: 2rem;
+			--fs-300: 1.6rem;
+			--fs-200: 1.4rem;
+		}
 
-    body.home-page{
-        background-image: url(/assets/home/background-home-tablet.jpg);
-    }
+		body.home-page {
+			background-image: url(/assets/home/background-home-tablet.jpg);
+		}
 
-    .header {
-        gap: initial;
-        padding: 0 0 0 4.3rem;
-    }
+		.header {
+			gap: initial;
+			padding: 0 0 0 4.3rem;
+		}
 
-    .nav-bar {
-        width: max(57vw, 50rem);
-        display: flex;
-        justify-content: center;
+		.nav-bar {
+			width: max(57vw, 50rem);
+			display: flex;
+			justify-content: center;
 		height: 9rem;
-        align-items: center;
-    }
+		align-items: center;
+		}
 
-    
 
-    .nav-list {
-        flex-direction: row;
-        padding: 0;
-        height: 100%;
-        gap: 4.8rem;
-    }
 
-    .list-item, .list-item > a{
-        position: relative;  /* Enables the underline indicator to work*/
-        cursor: pointer;
-        display: inherit;
-        align-items: center;
-        height: 100%;
-    }
+		.nav-list {
+			flex-direction: row;
+			padding: 0;
+			height: 100%;
+			gap: 4.8rem;
+		}
 
-    .list-item-number{
-        display: none;
-    }
+		.list-item,
+		.list-item > a {
+			position: relative;
+			/* Enables the underline indicator to work*/
+			cursor: pointer;
+			display: inherit;
+			align-items: center;
+			height: 100%;
+		}
 
-    .main-section{
-        margin: 0;
-    }
+		.list-item-number {
+			display: none;
+		}
 
-    .large-button{
-        letter-spacing: 2px;
-    }
-    
+		.main-section {
+			margin: 0;
+		}
+
+		.large-button {
+			letter-spacing: 2px;
+		}
 
 }
 
@@ -390,56 +455,53 @@ button {
 /*$ DESKTOP VIEW $*/
 /* ----------- */
 
-@media (min-width: 1024px){
-    :root {
-        /* Font-sizes */
-        --fs-900: 15rem;
-        --fs-700: 5.6rem;
-        --fs-600: 3rem;
-        --fs-500: 2.8rem;
-        --fs-400: 2.4rem;
-        --fs-300: 1.8rem;
-        --fs-200: 1.6rem;
-        
-    }
-    
-    body.home-page{
-        background-image: url(/assets/home/background-home-desktop.jpg);
-    }
+@media (min-width: 1024px) {
+	:root {
+		/* Font-sizes */
+		--fs-900: 15rem;
+		--fs-700: 5.6rem;
+		--fs-600: 3rem;
+		--fs-500: 2.8rem;
+		--fs-400: 2.4rem;
+		--fs-300: 1.8rem;
+		--fs-200: 1.6rem;
 
-    .header{
-        padding-top: 3rem;
-    }
-    
-    /* For the transparent line btw logo and navbar */
-    .nav-bar::before{
-        content: '';
-        position: absolute;
-        height: 1px;
-        width:  55%;             /* This was what finally helped to prevent the line 
+	}
+		body.home-page {
+			background-image: url(/assets/home/background-home-desktop.jpg);
+		}
+
+		.header {
+			padding-top: 3rem;
+		}
+	
+		/* For the transparent line btw logo and navbar */
+		.nav-bar::before {
+			content: '';
+			position: absolute;
+			height: 1px;
+		width: 55%;
+			/* This was what finally helped to prevent the line 
                                     from touching the logo while the translation below helped to keep a bit of it inside the navbar
                                     */
-        transform: translateX(-42vw);
-        background-color: hsl( var(--clr-white), 0.25);
-    }
-    
-    .list-item-number{
-        display: initial;
-    }
+		transform: translateX(-42vw);
+		background-color: hsl(var(--clr-white), 0.25);
+		}
+		.list-item-number {
+			display: initial;
+		}
 
-    .main-container{
-        padding-top: 25.1rem;
-        justify-content: space-around;
-        flex-direction: row;
-    }
+		.main-container {
+			padding-top: 25.1rem;
+			justify-content: space-around;
+			flex-direction: row;
+		}
 
-    .main-section{
-        align-items: initial;
-        text-align: initial;
-        max-width: 50ch;
-    }
+		.main-section {
+			align-items: initial;
+			text-align: initial;
+			max-width: 50ch;
+		}
 
 
 }
-
-
