@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
 
 /* ----------------- */
 /* General CSS Reset */
@@ -7,8 +7,8 @@
 ::before,
 ::after {
 	margin: 0;
-		padding: 0;
-		box-sizing: border-box;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* -------------------------- */
@@ -21,7 +21,7 @@ html {
 html,
 body {
 	scroll-behavior: smooth;
-		overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 h1,
@@ -38,7 +38,6 @@ img {
 	width: 100%;
 	display: block;
 }
-
 
 input,
 select,
@@ -58,12 +57,10 @@ a {
 
 button {
 	cursor: pointer;
-		line-height: inherit;
-		border: none;
-		outline: none;
+	line-height: inherit;
+	border: none;
+	outline: none;
 }
-
-
 
 /* ------------------- */
 /* Utility classes     */
@@ -182,37 +179,32 @@ button {
 	background-color: hsl(var(--clr-white));
 }
 
-
-
 /* ----------------- */
 /* Custom Variables */
 /* ----------------- */
 
 :root {
 	/* Colors */
-		--clr-dark: 230 35% 7%;
-		--clr-light: 231 77% 90%;
-		--clr-white: 0, 0%, 100%;
+	--clr-dark: 230 35% 7%;
+	--clr-light: 231 77% 90%;
+	--clr-white: 0, 0%, 100%;
 
 	/* Font-sizes */
-		--fs-900: 15rem;
-		--fs-800: 8rem;
-		--fs-700: 5.6rem;
-		--fs-600: 2rem;
-		--fs-500: 2.8rem;
-		--fs-400: 1.6rem;
-		--fs-300: 1.5rem;
-		--fs-200: 1.4rem;
-		--fs-100: 1.4rem;
+	--fs-900: 15rem;
+	--fs-800: 8rem;
+	--fs-700: 5.6rem;
+	--fs-600: 2rem;
+	--fs-500: 2.8rem;
+	--fs-400: 1.6rem;
+	--fs-300: 1.5rem;
+	--fs-200: 1.4rem;
+	--fs-100: 1.4rem;
 
 	/* Font families */
-		--ff-serif: "Bellefair", serif;
-		--ff-sans-cond: "Barlow Condensed", sans-serif;
-		--ff-sans-normal: "Barlow", sans-serif;
+	--ff-serif: 'Bellefair', serif;
+	--ff-sans-cond: 'Barlow Condensed', sans-serif;
+	--ff-sans-normal: 'Barlow', sans-serif;
 }
-
-
-
 
 /*------------ */
 /*$ MOBILE VIEW $*/
@@ -243,7 +235,7 @@ body.home-page {
                                                     size related media queries, Whether font-size or margin or anything else you might use a media query for. 
                                                     (P.S: Always set them to be equal to or slightly above the max value for best effect) */
 	aspect-ratio: 1;
-	}
+}
 
 .header {
 	display: flex;
@@ -256,56 +248,49 @@ body.home-page {
 	z-index: 10;
 	background-color: hsl(var(--clr-white), 0.07);
 	backdrop-filter: blur(3rem) saturate(130%);
-	}
-
-
-
+}
 
 /* A media query to prevent inheritance of these styles below into bigger screen sizes */
 @media screen and (max-width: 767.999px) {
 	.nav-bar {
-			width: 0;
-			position: fixed;
-			inset: 0 0 0 auto;
-			transition: width 150ms ease;
-			/* Using this transition alone will make the exit
-                                                    and entrance of the hamburger run at the same speed;
+		width: 0;
+		position: fixed;
+		inset: 0 0 0 auto;
+		transition: width 150ms ease;
+		/* Using this transition alone will make the exit
+																  and entrance of the hamburger run at the same speed;
 
-                                                    BUT I commented it out (OR maybe not😅) BECAUSE it causes a weird pop up flash of the hamburger nav menu when changing screen from desktop to mobile*/
-	
+												BUT I commented it out (OR maybe not😅) BECAUSE it causes a weird pop up flash of the hamburger nav menu when changing screen from desktop to mobile*/
+	}
+	.nav-bar.menu-toggle {
+		width: 25.1rem;
+		transition: width 500ms ease;
+		/*  Using This transition along with the one above makes the hamburger entrance
+														  speed differ from the exit; 
+														  
+														  If used alone, it affects only the entrance speed and neglects exit */
+	}
 
-		.nav-bar.menu-toggle {
-			width: 25.1rem;
-			transition: width 500ms ease;
-			/*  Using This transition along with the one above makes the hamburger entrance
-                                            speed differ from the exit; 
-                                            
-                                            If used alone, it affects only the entrance speed and neglects exit */
-	
+	.hamburger {
+		background-color: transparent;
+		background-size: 100% 100%;
+		height: 2.1rem;
+		width: 2.4rem;
+		z-index: 20;
+		background-image: url(assets/shared/icon-hamburger.svg);
+		transition: transform 100ms linear;
+	}
 
+	.hamburger.close {
+		position: fixed;
+		right: 3rem;
+		background-image: url(assets/shared/icon-close.svg);
+	}
 
-		.hamburger {
-			background-color: transparent;
-			background-size: 100% 100%;
-			height: 2.1rem;
-			width: 2.4rem;
-			z-index: 20;
-			background-image: url(assets/shared/icon-hamburger.svg);
-			transition: transform 100ms linear;
-		}
-	
-		.hamburger.close {
-			position: fixed;
-			right: 3rem;
-			background-image: url(assets/shared/icon-close.svg);
-		}
-	
-		.hamburger:active {
-			transform: rotate(180deg);
-			transition: all 0.4s ease;
-		}
-
-
+	.hamburger:active {
+		transform: rotate(180deg);
+		transition: all 0.4s ease;
+	}
 }
 
 .nav-list {
@@ -333,8 +318,8 @@ body.home-page {
 	gap: 8.1rem;
 	margin-top: 4.8rem;
 	padding-bottom: clamp(3.5rem, 11.7vh, 9rem);
-		/*This was done to eliminate the vertical overflow caused by the explore button animation*/
-	}
+	/*This was done to eliminate the vertical overflow caused by the explore button animation*/
+}
 
 .main-section {
 	display: flex;
@@ -344,22 +329,22 @@ body.home-page {
 	padding-inline: 2.4rem;
 	text-align: center;
 	max-width: 45ch;
-		/*To limit the number of characters on one line in this section*/
-	}
+	/*To limit the number of characters on one line in this section*/
+}
 
 .large-button {
 	display: flex;
-		position: relative;
+	position: relative;
 	justify-content: center;
-		align-items: center;
-		letter-spacing: 1.5px;
-		z-index: 1;
-		background-color: hsl(var(--clr-white));
-		color: hsl(var(--clr-dark));
-		width: clamp(15rem, 26vw, 30rem);
-		aspect-ratio: 1;
-		border-radius: 50%;
-	}
+	align-items: center;
+	letter-spacing: 1.5px;
+	z-index: 1;
+	background-color: hsl(var(--clr-white));
+	color: hsl(var(--clr-dark));
+	width: clamp(15rem, 26vw, 30rem);
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
 
 .large-button::after {
 	content: '';
@@ -378,79 +363,68 @@ body.home-page {
 	transform: scale(1.45);
 }
 
-
-
-
 /*------------ */
 /*$ TABLET VIEW $*/
 /* ----------- */
 
 @media (min-width: 768px) {
-
 	:root {
-			/* Font-sizes */
-			--fs-900: 15rem;
-			--fs-800: 10rem;
-			--fs-600: 2.6rem;
-			--fs-500: 2.8rem;
-			--fs-400: 2rem;
-			--fs-300: 1.6rem;
-			--fs-200: 1.4rem;
-		}
+		/* Font-sizes */
+		--fs-900: 15rem;
+		--fs-800: 10rem;
+		--fs-600: 2.6rem;
+		--fs-500: 2.8rem;
+		--fs-400: 2rem;
+		--fs-300: 1.6rem;
+		--fs-200: 1.4rem;
+	}
 
-		body.home-page {
-			background-image: url(/assets/home/background-home-tablet.jpg);
-		}
+	body.home-page {
+		background-image: url(/assets/home/background-home-tablet.jpg);
+	}
 
-		.header {
-			gap: initial;
-			padding: 0 0 0 4.3rem;
-		}
+	.header {
+		gap: initial;
+		padding: 0 0 0 4.3rem;
+	}
 
-		.nav-bar {
-			width: max(57vw, 50rem);
-			display: flex;
-			justify-content: center;
+	.nav-bar {
+		width: max(57vw, 50rem);
+		display: flex;
+		justify-content: center;
 		height: 9rem;
 		align-items: center;
-		}
+	}
 
+	.nav-list {
+		flex-direction: row;
+		padding: 0;
+		height: 100%;
+		gap: 4.8rem;
+	}
 
+	.list-item,
+	.list-item > a {
+		position: relative;
+		/* Enables the underline indicator to work*/
+		cursor: pointer;
+		display: inherit;
+		align-items: center;
+		height: 100%;
+	}
 
-		.nav-list {
-			flex-direction: row;
-			padding: 0;
-			height: 100%;
-			gap: 4.8rem;
-		}
+	.list-item-number {
+		display: none;
+	}
 
-		.list-item,
-		.list-item > a {
-			position: relative;
-			/* Enables the underline indicator to work*/
-			cursor: pointer;
-			display: inherit;
-			align-items: center;
-			height: 100%;
-		}
+	.main-section {
+		margin: 0;
+	}
 
-		.list-item-number {
-			display: none;
-		}
-
-		.main-section {
-			margin: 0;
-		}
-
-		.large-button {
-			letter-spacing: 2px;
-		}
-
+	.large-button {
+		letter-spacing: 2px;
+	}
 }
-
-
-
-
 /*------------ */
 /*$ DESKTOP VIEW $*/
 /* ----------- */
@@ -465,43 +439,41 @@ body.home-page {
 		--fs-400: 2.4rem;
 		--fs-300: 1.8rem;
 		--fs-200: 1.6rem;
-
 	}
-		body.home-page {
-			background-image: url(/assets/home/background-home-desktop.jpg);
-		}
 
-		.header {
-			padding-top: 3rem;
-		}
-	
-		/* For the transparent line btw logo and navbar */
-		.nav-bar::before {
-			content: '';
-			position: absolute;
-			height: 1px;
+	body.home-page {
+		background-image: url(/assets/home/background-home-desktop.jpg);
+	}
+
+	.header {
+		padding-top: 3rem;
+	}
+
+	/* For the transparent line btw logo and navbar */
+	.nav-bar::before {
+		content: '';
+		position: absolute;
+		height: 1px;
 		width: 55%;
-			/* This was what finally helped to prevent the line 
-                                    from touching the logo while the translation below helped to keep a bit of it inside the navbar
-                                    */
+		/* This was what finally helped to prevent the line 
+										from touching the logo while the translation below helped to keep a bit of it inside the navbar
+										*/
 		transform: translateX(-42vw);
 		background-color: hsl(var(--clr-white), 0.25);
-		}
-		.list-item-number {
-			display: initial;
-		}
+	}
+	.list-item-number {
+		display: initial;
+	}
 
-		.main-container {
-			padding-top: 25.1rem;
-			justify-content: space-around;
-			flex-direction: row;
-		}
+	.main-container {
+		padding-top: 25.1rem;
+		justify-content: space-around;
+		flex-direction: row;
+	}
 
-		.main-section {
-			align-items: initial;
-			text-align: initial;
-			max-width: 50ch;
-		}
-
-
+	.main-section {
+		align-items: initial;
+		text-align: initial;
+		max-width: 50ch;
+	}
 }
