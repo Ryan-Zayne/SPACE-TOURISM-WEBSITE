@@ -1,6 +1,3 @@
-@import 'destination.css';
-
-
 /*------------ */
 /*$ MOBILE VIEW $*/
 /*MOBILE FIRST DESIGN*/
@@ -18,13 +15,13 @@ body.crew-page {
 }
 
 /* body.crew-page::before{
-    content: '';
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(0.3rem);      // I tried adding a blur overlay to the background image
-                                        //  but it seems it isnt necessary
+	content: '';
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	 backdrop-filter: blur(0.3rem);      // I tried adding a blur overlay to the background image
+													 //  but it seems it isnt necessary
 } */
 
 .main-container {
@@ -44,7 +41,7 @@ body.crew-page {
 	position: absolute;
 	width: 31.6rem;
 	height: 2px;
-	background-color: #383B4B;
+	background-color: #383b4b;
 }
 
 .image-holder {
@@ -95,8 +92,6 @@ body.crew-page {
 	width: clamp(32.8rem, 62.5vw, 46rem);
 }
 
-
-
 /*------------ */
 /*$ TABLET VIEW $*/
 /* ----------- */
@@ -129,7 +124,7 @@ body.crew-page {
 	.secondary-section > h1 {
 		display: flex;
 		position: absolute;
-		top: 0rem;
+		top: 0;
 		align-self: flex-start;
 		margin-left: 4rem;
 	}
@@ -145,11 +140,7 @@ body.crew-page {
 	.slider-panel {
 		margin-block: 4.6rem;
 	}
-
 }
-
-
-
 
 /*------------ */
 /*$ DESKTOP VIEW $*/
@@ -201,5 +192,4 @@ body.crew-page {
 	.crew-article > h3 {
 		margin-block: 1rem 2rem;
 	}
-
 }

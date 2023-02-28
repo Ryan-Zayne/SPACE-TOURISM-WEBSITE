@@ -4,7 +4,12 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" type="image/png" sizes="32x32" href="/assets/shared/logo.svg" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/shared/logo.svg" />\
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="destination.css" />
 	<link rel="stylesheet" href="crew.css" />
 	<title>Space tourism website</title>
 </head>
@@ -60,23 +65,19 @@
 			</h1>
 			<!-- Slider Panel -->
 			<div class="slider-panel">
-				<input type="radio" name="slider" id="slide-1" 
-				data-image="commander-image" aria-controls="commander-article" checked>
+				<input type="radio" name="slider" id="slide-1" data-image="commander-image" aria-controls="commander-article" checked>
 				<label for="slide-1"></label>
 
-				<input type="radio" name="slider" id="slide-2" 
-				data-image="specialist-image" aria-controls="specialist-article">
+				<input type="radio" name="slider" id="slide-2" data-image="specialist-image" aria-controls="specialist-article">
 				<label for="slide-2"></label>
 
-				<input type="radio" name="slider" id="slide-3"  
-				data-image="pilot-image" aria-controls="pilot-article">
+				<input type="radio" name="slider" id="slide-3" data-image="pilot-image" aria-controls="pilot-article">
 				<label for="slide-3"></label>
-				
-				<input  type="radio" name="slider" id="slide-4"
-				data-image="engineer-image" aria-controls="engineer-article">
+
+				<input type="radio" name="slider" id="slide-4" data-image="engineer-image" aria-controls="engineer-article">
 				<label for="slide-4"></label>
 			</div>
-			<!-- Slider ends --> 
+			<!-- Slider ends -->
 
 			<!-- Articles begin -->
 			<article id="commander-article" class="crew-article">
@@ -88,8 +89,8 @@
 					commander of Crew Dragon Demo-2.
 				</p>
 			</article>
-			
-			
+
+
 			<article id="specialist-article" class="crew-article" hidden>
 				<h2 class="ff-serif uppercase fs-500">Mission Specialist</h2>
 				<h3 class="ff-serif uppercase fs-600">Mark Shuttleworth</h3>
@@ -110,7 +111,7 @@
 					station systems flight engineer.
 				</p>
 			</article>
-			
+
 			<article id="engineer-article" class="crew-article" hidden>
 				<h2 class="ff-serif uppercase fs-500">Flight Engineer</h2>
 				<h3 class="ff-serif uppercase fs-600">Anousheh Ansari</h3>
@@ -122,7 +123,7 @@
 			</article>
 		</section>
 	</main>
-	
+
 	<script type="module" src="slider.js"></script>
 </body>
 
